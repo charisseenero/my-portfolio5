@@ -1,0 +1,559 @@
+
+@import url("https://fonts.googleapis.com/css?family-Poppins: 200, 300, 400, 500, 600, 700, 800, 900&display=swap");
+@media (min-width: 992px) and (max-width: 1199px){
+  
+}
+
+  
+*{
+margin: 0;
+font-family: "poppins", sans-serif;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px; 
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    background-color: var(--clr);
+}
+
+header {
+position: fixed;
+top: 0;
+width: 100%; 
+background: rgb(205, 202, 202);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 35px 0;
+
+
+.logo {
+    text-decoration: none;
+    position: relative;
+    color: rgb(30, 7, 30);
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; 
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+header nav {
+text-decoration: none;
+}
+display: flex;
+gap: 10px;
+}
+header nav a { 
+    position: relative; 
+    text-decoration: none;
+padding: 12px 20px;
+color: #fff;
+font-weight: 300;
+}
+header nav a.active {
+background: var(--clr);
+color: #333;
+border-top-left-radius: 10px; 
+border-top-right-radius: 10px;
+}
+header nav a.active::before {
+content:"";
+position: absolute;
+left: 20px;
+bottom: 0;
+width: 20px;
+height: 20px;
+background: transparent; 
+border-bottom-right-radius: 20px; 
+box-shadow: 5px 5px 0 5px var(--clr);
+}
+header nav a.active::after {
+content:"";
+position: absolute;
+right: -20px;
+bottom: 0;
+width: 20px;
+height: 20px;
+background: transparent;
+border-bottom-left-radius: 20px; 
+box-shadow: -5px 5px 0 5px var(--clr);
+}
+
+#home {
+  background-color: black;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.image-container {
+  width: 300px; 
+  height: 200px; 
+  border: 1px solid #ccc; 
+  text-align: strech;
+  padding: 10px;
+}
+
+img {
+  max-width: 200%; 
+  max-height: 200%; 
+  display: block;
+  margin: 0 auto; 
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+button {
+    
+  width: 84px;
+  height: 30px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 7px; 
+  border-radius: 2rem;
+  border: none;
+  position: relative;
+  background: #100720;
+  transition: 0.1s;
+  
+}
+
+button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  filter: blur(15px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+button:active {
+  transform: scale(0.9) rotate(3deg);
+  background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  transition: 0.5s;
+}
+/* Styles for the #about section */
+#about {
+  background-color: white;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 98vw;
+  padding: 50px;
+  height: 130vh;
+  margin-top: 30px; 
+}
+
+/* Styles for the content within #about */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the image within #about */
+#about img {
+  max-width: 25%;
+  box-shadow: 0 0 10px rgba(129, 16, 129, 0.3);
+  margin-left: 60px;
+}
+
+/* Styles for the main text content */
+.text-content {
+  text-align: left; 
+  font-size: 0.5em; 
+  color: hsl(297, 13%, 27%); 
+  margin-top: 10px; 
+}
+
+/* Styles for the "About Me" heading */
+h2 {
+  font-size: 4em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #100720;
+  order: 1;
+}
+
+/* Styles for paragraphs within the text content */
+h3 {
+  font-size: 1.5em;
+  color: #050505;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: none;
+}
+.highlight-name {
+    color: #FF5733; 
+    font-weight: bold;
+  }
+
+/* Style for the skills section */
+#skills {
+  background-color: black;
+  background-size: cover;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  width: 99vw;
+  padding: 50px;
+  height: 110vh;
+  text-align: center; 
+}
+
+/* Styles for the skills container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Styles for each skill item */
+.skills {
+  text-align: center;
+  width: 300px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skills i {
+  font-size: 40px;
+  color: #4a17a3;
+}
+
+.skills h3 {
+  font-size: 1.5em;
+  margin: 20px 0;
+  color: #333;
+}
+.highlight-text {
+    color: #f5f5f5; 
+    font-weight: bold;
+  }
+h6 {
+  text-transform: none;
+  text-align: center;
+  font-size: 5em;
+  text-shadow: 2px 2px 4px rgba(219, 216, 216, 0.916);
+  color: #925fea;
+  order: 0; 
+  
+}
+
+.skills-item p {
+  font-size: 1em;
+  color: #777;
+}
+.skills:hover {
+  background-color: #ecebed; 
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills {
+    width: 100%;
+  }
+}
+
+#education {
+  background-color: white;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  height: 150vh; 
+}
+
+.logo {
+  width: 50px; 
+  height: auto; 
+}
+.education-item {
+  background-color: #fff;
+  border: 2px solid #585757;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px; 
+  text-align: center; 
+  width: 80%; 
+  margin: 10px auto; 
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; 
+}
+
+.education-item:hover {
+  background-color: #ecebed; 
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.education-item p {
+  font-size: 1em;
+  color: #333;
+  margin: 10px 0; 
+}
+h7 {
+  text-align: center;
+  font-size: 4em;
+  text-shadow: 2px 2px 4px rgba(99, 98, 98, 0.916);
+  color: #925fea;
+  order: 0;
+  
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .education-item {
+    width: 100%;
+  }
+}
+
+
+
+/* Styles for the main text content */
+.text-content {
+  text-align: center;
+  font-size: 1em;
+  color: hsl(300, 12%, 97%);
+  margin-top: 10px;
+}
+
+
+/* Styles for the "About Me" heading */
+h4 {
+  font-size: 5em;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #b6158b;
+  order: 1;
+}
+
+div a {
+  color: #925fea;
+  text-decoration: none;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(101, 97, 97, 0.5);
+  transition: color 0.3s;
+}
+
+div a:hover {
+  color: #5f2f7d;
+}
+
+
+
+
+#contact {
+  background-color: black;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 0.5vh;
+  padding: 1px;
+  color: black;
+}
+
+.contact-icons {
+  text-align: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 100%; 
+}
+
+h5 {
+  text-align: center;
+  font-size: 3em;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #925fea;
+  order: 1;
+}
+p{
+  text-align: center;
+  font-size: 1em;
+  color: #925fea;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #925fea; 
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.contact-icons a i {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.contact-icons a span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact-icons a:hover {
+  color: #561b80;
+}
+
+
+  
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 15px;
+  gap: 10px;
+  box-shadow: 0px 0px 15px white;
+}
+
+
+/* for all social containers*/
+.socialContainer {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(2,245,255,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: white;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: white;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: white;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(21, 20, 20);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.border{
+    padding: 5px;
+      background: linear-gradient(110deg, #c567bd 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #6edbe7 34%, #de70d3 34%);
+    background-size: 400% 400%;
+    height: 450px;
+    background-position: 25% 50%;
+    -webkit-animation: Gradient 3s ease infinite;
+    -moz-animation: Gradient 3s ease infinite;
+  }
+  .inner-cutout{
+    padding: 40px 0;
+    display: block;
+    background-color:#ff6f69;/*#ff6f69*/
+      
+    margin: 2%;
+    padding-bottom: 40px;
+    height: 350px;
+    background: radial-gradient(#88e7fa, #ed7fd5);
+     background-size: 300%;
+    background-position:50% 50%;
+  
+  }
+  .knockout {
+    
+    vertical-align: middle;
+    text-align: center;
+    font-style: italic;
+    font-size:50pt;
+    color: blue;
+    color: #fff;
+    background: linear-gradient(110deg, #ffffff 33%, rgba(120, 116, 116, 0) 33%), linear-gradient(110deg, #a3a1a1 34%, #8d8888 34%);
+    background-size: 400%;
+     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .knockout{
+      animation: Gradient 3s ease infinite;
+      -webkit-animation: Gradient 3s ease infinite;
+      -moz-animation: Gradient 3s ease infinite;
+  }
+  
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 30% 50%
+    }
+    50% {
+      background-position: 25% 50%
+    }
+  }
